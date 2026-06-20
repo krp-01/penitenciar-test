@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test Candidat - Penitenciar RP</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Pagina candidatului</p>
+      <h1>Test Admitere Penitenciar</h1>
+      <p class="subtitle">
+        Completează testul serios. La final apeși pe Finalizează testul, iar testul va fi trimis automat în portalul evaluator.
+        Această pagină nu conține baremul și nu afișează răspunsurile corecte.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Date candidat</h2>
+      <p class="note">Aceste date vor fi trimise automat în portalul evaluator.</p>
+      <div class="grid two">
+        <label>Nume IC / OOC
+          <input id="candidateName" placeholder="Ex: Alex Carp" />
+        </label>
+        <label>Discord ID / Nume Discord
+          <input id="discordName" placeholder="Ex: alex.ro" />
+        </label>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <div><p class="eyebrow">SUB I</p><h2>Situații practice</h2></div>
+        <span class="points">35P</span>
+      </div>
+      <p class="note">Răspunde complet. Se punctează calmul, procedura, raportarea și proporționalitatea.</p>
+      <div id="situations"></div>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <div><p class="eyebrow">SUB II</p><h2>Întrebări grilă</h2></div>
+        <span class="points">30P</span>
+      </div>
+      <p class="note">Alege o singură variantă. Răspunsurile se verifică doar pe pagina evaluatorului.</p>
+      <div id="quiz"></div>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <div><p class="eyebrow">SUB III</p><h2>Regulament server</h2></div>
+        <span class="points">35P</span>
+      </div>
+      <p class="note">Explică răspunsurile ca pentru un test de facțiune. Unde se cer exemple, oferă exemple clare.</p>
+      <div id="rules"></div>
+    </section>
+
+    <section class="card">
+      <h2>Finalizează testul</h2>
+      <p class="note">
+        După ce termini, apasă pe butonul de mai jos. Testul va apărea automat în portalul evaluator, la categoria Teste în așteptare.
+      </p>
+      <div class="actions">
+        <button class="primary" id="generateBtn">Finalizează testul</button>
+        <button id="saveBtn">Salvează local</button>
+        <button id="printBtn">Printează testul</button>
+      </div>
+      <p id="statusMessage" class="status"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Test RP pentru intrarea în Penitenciar. Pagina candidatului nu conține răspunsuri corecte.</p>
+  </footer>
+
+  <script src="backend-config.js"></script>
+<script src="backend-api.js"></script>
+<script src="candidate.js"></script>
+</body>
+</html>
